@@ -6,9 +6,10 @@ const cardList = [
     {name: "Ürün 4",price: 80,id: 4},
 ]
 let totalP = 0
+// Genel Ürünler Listesi
 function addCard(eleman) {
     let shoppingArea = document.getElementById("shoppingArea")
-    // Sepeti Üürn Ekleme
+    // Sepete Ürün Ekleme
     for (card of cardList) {
         if (eleman.id == card.id) {
             li = `
@@ -17,7 +18,7 @@ function addCard(eleman) {
             shoppingArea.insertAdjacentHTML("beforeend", li)
         }
     }
-    // fiyat listesi
+    // Fiyat Listesi
     for (fee of cardList) {
         if (eleman.id == fee.id) {
             let price = fee.price;
